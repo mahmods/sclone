@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Changa');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Varela Round', 'Changa' ,sans-serif;
+  background-color: #f1f5f8;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.Root {
+  text-align: center;
+  
+}
+
+.header {
+  height: 160px;
+  background-color: #fff;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.header--top {
+  flex-basis: 60px;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header--top__brand {
+  font-size: 22px;
+  color: #3a4652;
+  margin: 20px 70px;
+}
+
+.header--top__brand i {
+  margin-right: 10px;
+  font-size: 26px;
+  color: #f30069;
+}
+
+.header--top__socials {
+  margin: 15px 40px;
+}
+
+.header--top__socials a {
+  font-size: 26px;
+  color: #3a4652;
+}
+
+.header--top__socials a:hover {
+  color: #4378ad;
+}
+
+.header--bottom {
+  flex: auto;
+  display: flex;
+  font-size: 18px;
+}
+
+.header--bottom__nav {
+  margin-top: auto;
+  height: 50px;
+  margin-left: 40px;
+}
+
+.header--bottom__nav-link {
+  text-decoration: none;
+  color: #384651;
+  padding: 28px 20px;
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: 2px solid #f30069;
+}
+
+.tracks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.track {
+  height: 400px;
+  width: 350px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.track--info {
+  background-color: pink;
+  flex: auto;
+  background-size: cover;
+  background-position: center center;
+  padding: 0 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.track--info__title {
+  color: #fff;
+  font-size: 18px;
+  margin-top: auto;
+}
+
+.track--info__user {
+  color: rgba(255,255,255,0.6);
+}
+
+
+.track--stats {
+  background-color: white;
+  color: #808080;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.track--stats span {
+  margin: 10px 40px;
+}
+
+.track--stats span i {
+  margin-right: 10px;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  -webkit-perspective: 900;
+  perspective: 900;
+  -webkit-perspective-origin: 80% 100%;
+  perspective-origin: 80% 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.player--song-image img {
+  margin-left: 20px;
+  border-radius: 50%;
+  height: 40px;
+}
+
+.player--song-title{
+  color: #5c5c5c;
+  text-align: left;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  flex-basis: auto
+}
+
+.player--song--user {
+  color: #8b8b8b;
+  font-size: 12px;
+  padding-top: 5px;
+  font-weight: 300;
+}
+
+.player--controls{
+}
+
+.player--controls__PlayBtn { 
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border: 1px solid #ee864f;
+  border-radius: 100%;
+  text-shadow: none;
+  background-color: #f30069;
+  font-size: 12px;
+  color: #fff;
+}
+
+.player--controls__Btn { 
+  margin: 0 10px;
+  border: 0;
+  background-color: transparent;
+  border-radius: 100%;
+  text-shadow: none;
+  font-size: 16px;
+  color: #808080;
+}
+
+.player--slider {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.player--slider-vol {
+  flex-basis: 10%;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .player--slider-vol {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .player--song-title{
+    display: none;
+  }
+  .player--song-image{
+    display: none;
+  }
+}
+
+.player--star-time, .player--duration, .player--muteBtn {
+  flex: 0;
+  font-size: 14px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+  outline: 0;
+}
+
+.slider__bar {
+  width: 100%;
+  height: 2px;
+  background-color: #f0f0f0;
+  outline: 0;
+}
+
+.slider__bar__fill {
+  position: relative;
+  height: 100%;
+  background-color: #f3006a;
+}
+
+.slider__handle {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: #f3006a;
+  border-radius: 50%;
+  outline: 0;
+}
